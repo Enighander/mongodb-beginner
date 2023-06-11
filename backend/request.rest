@@ -1,0 +1,26 @@
+GET http://127.0.0.1:5000/products
+
+###
+
+GET http://127.0.0.1:5000/products/64804adc64a0a64c9cbf8738
+
+###
+POST http://127.0.0.1:5000/products
+Content-Type: application/json
+
+{
+    "name"  : "Gigabyte GeForce 4080ti",
+    "price" : "18000000",
+    "stock" : "10"
+}
+
+###
+PATCH http://127.0.0.1:5000/products/64804f4c06aef389c771913b
+Content-Type: application/json
+
+{
+    "name"  : "Gigabyte GeForce 4080 Ti"
+}
+
+###
+DELETE http://127.0.0.1:5000/products/64804f4c06aef389c771913b
