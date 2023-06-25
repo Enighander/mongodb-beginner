@@ -16,7 +16,7 @@ useEffect(()=> {
 
 
 const getProductById = async (id) => {
-    const response = await axios.get(`http://127.0.0.1:5000/products/${id}`);
+    const response = await axios.get(`http://localhost:5000/products/${id}`);
     setName(response.data.name);
     setPrice(response.data.price);
     setStock(response.data.stock);
@@ -26,7 +26,7 @@ const getProductById = async (id) => {
 const updateProduct = async (e) => {
     e.preventDefault();
     try {
-        await axios.patch(`http://127.0.0.1:5000/products/${id}`, {
+        await axios.patch(`http://localhost:5000/products/${id}`, {
             name,
             price,
             stock,
