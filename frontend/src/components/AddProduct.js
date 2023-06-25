@@ -11,7 +11,7 @@ const navigate = useNavigate();
 const saveProduct = async (e) => {
     e.preventDefault();
     try {
-        await axios.post("http://127.0.0.1:5000/products", {
+        await axios.post("http://localhost:5000/products", {
             name,
             price,
             stock
