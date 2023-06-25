@@ -11,7 +11,7 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("http://127.0.0.1:5000/products");
+    const response = await axios.get("http://localhost:5000/products");
     setProduct(response.data);
   };
 
@@ -19,7 +19,7 @@ const ProductList = () => {
     const confirmDelete = window.confirm("Are you sure you want to delete this product?");
     if (confirmDelete) {
       try {
-        await axios.delete(`http://127.0.0.1:5000/products/${id}`);
+        await axios.delete(`http://localhost:5000/products/${id}`);
         const newProducts = products.filter((product) => product._id !== id);
         setProduct(newProducts);
       } catch (error) {
