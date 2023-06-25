@@ -5,7 +5,7 @@ import ProductRoute from "./routes/ProductRoute.js";
 
 
 const app = express();
-mongoose.connect('mongodb://127.0.0.1/fullstack_db',{
+mongoose.connect('mongodb://localhost/fullstack_db',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
